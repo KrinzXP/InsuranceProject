@@ -5,8 +5,8 @@ import java.util.*;
 import enumLibrary.*;
 
 public class Prospect extends Customer {
-	protected static CustomerStatus customerStatus;
-	protected static Integer prospectID;
+	protected CustomerStatus customerStatus;
+	protected int prospectID;
 	
 	public CustomerStatus getCustomerStatus()
 	{
@@ -27,8 +27,6 @@ public class Prospect extends Customer {
 	{
 		this.prospectID = prospectID;
 	}
-	
-	
 	
 	
 	public Prospect(String namaDepan, String namaBelakang, LocalDate tanggalLahir, String tempatLahir, Gender gender,
@@ -101,30 +99,31 @@ public class Prospect extends Customer {
 //		return listProspect;
 //	}
 	
-	public static long getAge()
+	public long getAge()
 	{
-		long age = ChronoUnit.YEARS.between(tanggalLahir, LocalDate.now());
+		long age = ChronoUnit.YEARS.between(this.tanggalLahir, LocalDate.now());
 		return age;
 	}
 	
-	public static String birthSummary()
+	public String birthSummary()
 	{
-		String birthSummary = String.format("%s (%s tahun)", tanggalLahir, getAge());
+		String birthSummary = String.format("%s (%s tahun)", this.tanggalLahir, getAge());
 		return birthSummary;
 	}
 	
-	public static String printSummary()
+	public String printSummary()
 	{
 		String summary = String.format("No: %d, %s %s, %s, %s, %s, %s", 
-				prospectID, namaDepan, namaBelakang, birthSummary(), gender ,pekerjaan, customerStatus);
+				this.prospectID, this.namaDepan, this.namaBelakang, this.birthSummary(), this.gender ,this.pekerjaan, this.customerStatus);
 		return summary;
 	}
 	
-	public static void switchProspectStatus()
+	public void switchProspectStatus()
 	{
 		setCustomerStatus(CustomerStatus.NASABAH);
 	}
 
+	
 
 	
 }

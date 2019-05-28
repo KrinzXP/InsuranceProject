@@ -7,12 +7,12 @@ import java.time.temporal.ChronoUnit;
 import enumLibrary.*;
 
 public class Customer {
-	protected static String namaDepan;
-	protected static String namaBelakang;
-	protected static LocalDate tanggalLahir;
-	protected static String tempatLahir;
-	protected static Gender gender;
-	protected static String pekerjaan;
+	protected String namaDepan;
+	protected String namaBelakang;
+	protected LocalDate tanggalLahir;
+	protected String tempatLahir;
+	protected Gender gender;
+	protected String pekerjaan;
 	
 	public String getNamaDepan()
 	{

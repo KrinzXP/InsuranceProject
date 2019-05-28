@@ -93,9 +93,10 @@ public class MainProgram {
 			case "1":
 				//TODO: Function to add a person into customer list (prospect and nasabah included)
 				Asuransi.addProspect();
+				break;
 			case "2":
-				//TODO: Function to flick the switch to Nasabah
-				
+				//TODO: Function to flick the switch to Nasabah not complete
+				Asuransi.addNasabah();
 			case "3":
 				mainMenu(scanner);
 			case "4":

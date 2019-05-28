@@ -43,14 +43,14 @@ public class Asuransi {
 	}
 	
 	
-	public static void printAllProspect()
-	{
-		for(Prospect prospects : prospect.values())
-		{
-			Prospect.printSummary();
-		}
-		
-	}
+//	public void printAllProspect()
+//	{
+//		for(Prospect prospects : prospect.values())
+//		{
+//			Prospect.printSummary();
+//		}
+//		
+//	}
 	
 	
 	
@@ -114,7 +114,7 @@ public class Asuransi {
 		
 		prospect.put(0, person);
 		System.out.println(prospectID);
-		printAllProspect();
+		//printAllProspect();
 		
 	}
 	
@@ -129,16 +129,16 @@ public class Asuransi {
 	}
 	
 	
-	public static void printAllNasabah()
-	{
-		
-		for(Nasabah nasabah : nasabah.values())
-			{
-				Nasabah.printSummary();
-			}
-			
-		
-	}
+//	public void printAllNasabah(HashMap)
+//	{
+//		
+//		for(Nasabah nasabah : nasabah.values())
+//			{
+//				Nasabah.printSummary();
+//			}
+//			
+//		
+//	}
 	
 	
 }
