@@ -6,7 +6,7 @@ import enumLibrary.*;
 
 public class Prospect extends Customer {
 	protected CustomerStatus customerStatus;
-	protected int prospectID;
+	protected static int prospectID;
 	
 	public CustomerStatus getCustomerStatus()
 	{

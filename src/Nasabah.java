@@ -1,4 +1,5 @@
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.math.*;
 import enumLibrary.*;
@@ -67,5 +68,19 @@ public class Nasabah extends Prospect{
 		return formatNasabah;
 	}
 	
+//	public BigDecimal cekIuran()
+//	{
+//		//check age
+//		long age = ChronoUnit.YEARS.between(tanggalLahir, LocalDate.now());
+//		
+//			if age > 20 actualIuran = iuranDuaPuluhKebawah
+//			if age < 20 actuaalIuran = iuranAtasDuaPuluh
+//		return actualIuran;
+//	}
+	
+	/*
+	 * Cek age untuk kendaraan
+	 * if < 20 cannot get policy
+	 */
 	
 }
