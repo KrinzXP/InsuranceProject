@@ -11,16 +11,28 @@ public class Customer {
 	protected String namaBelakang;
 	protected LocalDate tanggalLahir;
 	protected String tempatLahir;
-	protected String gender;
+	protected Gender gender;
 	protected String pekerjaan;
 	
 	public String getNamaDepan()
 	{
 		return this.namaDepan;
 	}
+	
+	public void setNamaDepan(String namaDepan)
+	{
+		this.namaDepan = namaDepan;
+	}
+	
+	
 	public String getNamaBelakang()
 	{
 		return this.namaBelakang;
+	}
+	
+	public void setNamaBelakang(String namaBelakang)
+	{
+		this.namaBelakang = namaBelakang;
 	}
 	
 	public LocalDate getTanggalLahir()
@@ -28,17 +40,27 @@ public class Customer {
 		return this.tanggalLahir;
 	}
 	
+	public void setTanggalLahir(LocalDate tanggalLahir)
+	{
+		this.tanggalLahir = tanggalLahir;
+	}
+	
 	public String getTempatLahir()
 	{
 		return this.tempatLahir;
 	}
 	
-	public String getGender()
+	public void setTempatLahir(String tempatLahir)
+	{
+		this.tempatLahir = tempatLahir;
+	}
+	
+	public Gender getGender()
 	{
 		return this.gender;
 	}
 	
-	public void setGender(String gender)
+	public void setGender(Gender gender)
 	{
 		this.gender = gender;
 	}
@@ -49,7 +71,12 @@ public class Customer {
 		return this.pekerjaan;
 	}
 	
-	public Customer(String namaDepan, String namaBelakang, LocalDate tanggalLahir, String tempatLahir, String gender, String pekerjaan)
+	public void setPekerjaan(String pekerjaan)
+	{
+		this.pekerjaan = pekerjaan;
+	}
+	
+	public Customer(String namaDepan, String namaBelakang, LocalDate tanggalLahir, String tempatLahir, Gender gender, String pekerjaan)
 	{
 		this.namaDepan = namaDepan;
 		this.namaBelakang = namaBelakang;
@@ -58,12 +85,15 @@ public class Customer {
 		this.gender = gender;
 		this.pekerjaan = pekerjaan;
 	}
-	
-	public long getAge()
-	{
-		long age = ChronoUnit.YEARS.between(this.tanggalLahir, LocalDate.now());
-		return age;
+	public Customer() {
+		// TODO Auto-generated constructor stub
 	}
+	
+//	public long getAge()
+//	{
+//		long age = ChronoUnit.YEARS.between(this.tanggalLahir, LocalDate.now());
+//		return age;
+//	}
 	
 	
 	
