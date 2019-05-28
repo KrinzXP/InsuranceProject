@@ -10,6 +10,8 @@ public class Product {
 	private String namaPolis;
 	private String jenis;
 	private String frekuensi;
+	private BigDecimal iuranDuaPuluhKebawah;
+	private BigDecimal iuranAtasDuaPuluh;
 	private String manfaat;
 	
 	public String getNamaPolis()
@@ -21,6 +23,23 @@ public class Product {
 	{
 		return this.jenis;
 	}
+	
+	public BigDecimal getIuranDuaPuluhKebawah() {
+		return iuranDuaPuluhKebawah;
+	}
+
+	public void setIuranDuaPuluhKebawah(BigDecimal iuranDuaPuluhKebawah) {
+		this.iuranDuaPuluhKebawah = iuranDuaPuluhKebawah;
+	}
+
+	public BigDecimal getIuranAtasDuaPuluh() {
+		return iuranAtasDuaPuluh;
+	}
+
+	public void setIuranAtasDuaPuluh(BigDecimal iuranAtasDuaPuluh) {
+		this.iuranAtasDuaPuluh = iuranAtasDuaPuluh;
+	}
+	
 	
 	public String getFrekuensi()
 	{
@@ -34,13 +53,23 @@ public class Product {
 	
 	
 	
-	public Product(String namaPolis, String jenis, String frekuensi, String manfaat)
+	public Product(String namaPolis, String jenis, String frekuensi, BigDecimal iuranDuaPuluhKebawah, BigDecimal iuranAtasDuaPuluh, String manfaat)
 	{
 		this.namaPolis = namaPolis;
 		this.jenis = jenis;
 		this.frekuensi = frekuensi;
+		this.iuranDuaPuluhKebawah = iuranDuaPuluhKebawah;
+		this.iuranAtasDuaPuluh = iuranAtasDuaPuluh;
 		this.manfaat = manfaat;
 	}
+	
+	
+
+
+	
+	
+
+	
 	
 	
 }

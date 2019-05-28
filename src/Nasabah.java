@@ -5,10 +5,12 @@ import enumLibrary.*;
 
 public class Nasabah extends Prospect{
 
+	private String idNasabah;
 	private String noKtp;
 	private String statusKK;
 	private PaymentMethod metodePembayaran;
 	private LinkedList<Product> polis;
+	private LinkedList<Kendaraan> kendaraan;
 	
 	public String getNoKTP()
 	{
@@ -41,14 +43,29 @@ public class Nasabah extends Prospect{
 	}
 	
 	public Nasabah(String namaDepan, String namaBelakang, LocalDate tanggalLahir, String tempatLahir, Gender gender,
-			String pekerjaan, CustomerStatus customerStatus, String noKtp, String statusKK, PaymentMethod metodePembayaran) {
-		super(namaDepan, namaBelakang, tanggalLahir, tempatLahir, gender, pekerjaan, customerStatus);
+			String pekerjaan, CustomerStatus customerStatus, String idNasabah,String noKtp, String statusKK, PaymentMethod metodePembayaran,
+			LinkedList<Product> polis, LinkedList<Kendaraan> kendaraan) {
+		super(namaDepan, namaBelakang, tanggalLahir, tempatLahir, gender, pekerjaan, prospectID, customerStatus);
 		// TODO Auto-generated constructor stub
 		this.noKtp = noKtp;
 		this.statusKK = statusKK;
 		this.metodePembayaran = metodePembayaran;
 	}
 	
+	public String getIDNasabah()
+	{
+		LocalDate now = LocalDate.now();
+		String idNasabah = String.format("%d/%d/%d", now.getMonth(), now.getYear(), prospectID);
+		return idNasabah;
+	}
+	
+	public String printSummaryNasabah()
+	{
+		
+		String formatNasabah = String.format("No: %s, %s %s, %s, %s, %s, %s, %s ", 
+				getIDNasabah(), namaDepan, namaBelakang, birthSummary(),pekerjaan,noKtp,statusKK,metodePembayaran);
+		return formatNasabah;
+	}
 	
 	
 }

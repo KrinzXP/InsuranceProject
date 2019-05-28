@@ -91,9 +91,11 @@ public class MainProgram {
 		switch(input)
 		{
 			case "1":
-				//TODO: Function buyProduct()
+				//TODO: Function to add a person into customer list (prospect and nasabah included)
+				Asuransi.addProspect();
 			case "2":
-				//TODO: Function detailProduct()
+				//TODO: Function to flick the switch to Nasabah
+				
 			case "3":
 				mainMenu(scanner);
 			case "4":
@@ -116,9 +118,14 @@ public class MainProgram {
 		switch(input)
 		{
 			case "1":
-				//menuProspect(scanner); TODO: Function to add a person into customer list (prospect and nasabah included)
+				//menuProspect(scanner); TODO: Function buyProduct()
+				buyProduct();
+				
 			case "2":
-				//menuCustomer(scanner); TODO: Function to flick the switch from Prospect to Nasabah
+				
+				//Asuransi.printAllNasabah();
+				
+				
 			case "3":
 				mainMenu(scanner);
 			case "4":
@@ -130,11 +137,38 @@ public class MainProgram {
 	
 	public static void buyProduct()
 	{
+		Asuransi.addNasabah();
+		Scanner scanner = new Scanner(System.in);
+		String input;
+		
+		System.out.println("Pilih Nomor Customer: ");
+		input = scanner.nextLine();
+		
+		System.out.println("Pilih Nama Produk");
+		input = scanner.nextLine();
+		//do age check
+		//do policy check
+		//if kendaraan, different kind of input
+		
+		System.out.println("Pilih Nomor Customer Tertanggung");
+		input = scanner.nextLine();
+		//check policy for single only policy
+		//age check for proper iuran cost
+		//overload nasabah with proper iuran
+		
+		//setTanggalMulaiPolis(LocalDate.now())
 		
 	}
 	
-	public static void detailProduct() 
+	public static void detailPolicy() 
 	{
+		Scanner scanner = new Scanner(System.in);
+		String input;
 		
+		System.out.println("Pilih Nomor Customer: ");
+		input = scanner.nextLine();
+		
+		//prints detail of customer and all policies he/she is in
+		//increment tanggal and print iuran
 	}
 }

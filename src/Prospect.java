@@ -5,25 +5,25 @@ import java.util.*;
 import enumLibrary.*;
 
 public class Prospect extends Customer {
-	protected CustomerStatus customerStatus;
-	protected int prospectID;
+	protected static CustomerStatus customerStatus;
+	protected static Integer prospectID;
 	
 	public CustomerStatus getCustomerStatus()
 	{
 		return this.customerStatus;
 	}
 	
-	public void setCustomerStatus(CustomerStatus customerStatus)
+	public static void setCustomerStatus(CustomerStatus customerStatus)
 	{
-		this.customerStatus = customerStatus;
+		customerStatus = customerStatus;
 	}
 	
-	public int getProspectID()
+	public Integer getProspectID()
 	{
-		return this.prospectID;
+		return prospectID;
 	}
 	
-	public void setProspectID(int prospectID)
+	public void setProspectID(Integer prospectID)
 	{
 		this.prospectID = prospectID;
 	}
@@ -36,6 +36,7 @@ public class Prospect extends Customer {
 		super(namaDepan, namaBelakang, tanggalLahir, tempatLahir, gender, pekerjaan);
 		
 		this.customerStatus = customerStatus;
+		this.prospectID = prospectID;
 	}
 	
 	public Prospect() {
@@ -100,21 +101,30 @@ public class Prospect extends Customer {
 //		return listProspect;
 //	}
 	
-	public long getAge()
+	public static long getAge()
 	{
-		long age = ChronoUnit.YEARS.between(this.tanggalLahir, LocalDate.now());
+		long age = ChronoUnit.YEARS.between(tanggalLahir, LocalDate.now());
 		return age;
 	}
 	
-	public String birthSummary()
+	public static String birthSummary()
 	{
-		String birthSummary = String.format("%s (%s tahun)", this.tanggalLahir, this.getAge());
+		String birthSummary = String.format("%s (%s tahun)", tanggalLahir, getAge());
 		return birthSummary;
 	}
 	
-	public void printSummary()
+	public static String printSummary()
 	{
-		String summary = String.format("%s %s, %s, %s, %s, %s" );
+		String summary = String.format("No: %d, %s %s, %s, %s, %s, %s", 
+				prospectID, namaDepan, namaBelakang, birthSummary(), gender ,pekerjaan, customerStatus);
+		return summary;
 	}
+	
+	public static void switchProspectStatus()
+	{
+		setCustomerStatus(CustomerStatus.NASABAH);
+	}
+
+
 	
 }
